@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Running Sum</title>
+</head>
+<body>
+
+Enter a number: <input id="field" type="text" onchange="add();">
+
+<br><br>
+
+<div id="summary"></div>
+
+<script>
+
+var numArray = [];
+
+function add() {
+	var num = document.getElementById("field").value;
+	document.getElementById("field").value = "";
+	numArray.push(parseInt(num));
+	var text = "sum of [";
+	var sum = 0;
+	for(var i=0; i<numArray.length; i++) {
+		text += numArray[i];
+		if(i != numArray.length-1) {
+			text+=",";
+		}
+		sum += numArray[i];
+	}
+	text += "] = "+sum;
+	
+	document.getElementById("summary").innerHTML = text;
+	
+}
+
+</script>
+</body>
+</html>

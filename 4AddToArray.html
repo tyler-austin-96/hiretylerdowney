@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add To Array</title>
+</head>
+<body>
+
+Enter a name: <input type="text" id="field" onchange="add();">
+<br>
+<br>
+<div id="main">The array of names: <br></div> 
+
+
+
+<script>
+
+var count = 0;
+
+function add() {
+	
+	var main = document.getElementById("main");
+
+	count++;
+	if(count==1) {
+		main.innerHTML += "<br>";
+	}
+	var text = document.getElementById("field").value;
+	document.getElementById("field").value = "";
+	
+	main.innerHTML += "<div>"+count+": "+text+"</div>";
+	
+}
+</script>
+
+
+</body>
+</html>

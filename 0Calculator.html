@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calculator</title>
+</head>
+<body>
+
+<script>
+function foo() {
+	var x = parseInt(document.getElementById("x").value);
+	var y = parseInt(document.getElementById("y").value);
+	var block = document.getElementById("block");
+	document.getElementById("block").innerHTML = x+" + "+y+" = "+(x+y)+"<br>"+
+	x+" - "+y+" = "+(x-y)+"<br>"+
+	x+" * "+y+" = "+(x*y)+"<br>"+
+	x+" / "+y+" = "+(x/y)+"<br>"+
+	x+" % "+y+" = "+(x%y)+"<br>";
+	
+	block.style.backgroundColor = "black";
+	block.style.color = "white";
+	block.style.border = "4px solid red";
+	block.style.fontFamily = "Courier"
+	block.style.fontSize = "12pt";
+	block.style.float = "left";
+	block.style.padding = "5px";
+}
+
+</script>
+<h4>Calculator</h4>
+
+<form>
+	x<input id="x" type="text" name="x">
+	<br>
+	y<input id="y" type="text" name="y">
+	<br>
+	<button type="button" onclick="foo();">Show results</button>
+</form>
+<br>
+
+<div id="block">
+Waiting for input...
+</div>
+
+</body>
+</html>

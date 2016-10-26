@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hide / Show</title>
+</head>
+<body>
+
+<script>
+	function toggle() {
+		var curState = document.getElementById("hideShow").name;
+		if(curState == "hide") {
+			document.getElementById("hideShow").name = "show";
+			document.getElementById("hideShow").innerHTML = "Show";
+			document.getElementById("text").innerHTML = "";
+		}
+		else {
+		document.getElementById("hideShow").name = "hide";
+		document.getElementById("hideShow").innerHTML = "Hide";
+		document.getElementById("text").innerHTML = "This text will appear and disappear";
+		}
+	}
+</script>
+
+	<button id="hideShow" type="button" name="hide" onclick="toggle();">Hide</button> 
+	<br><br>
+	<div id="text">This text will appear and disappear</div>
+	
+</body>
+</html>

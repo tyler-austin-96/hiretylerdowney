@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Over Out</title>
+<link type="text/css" rel="stylesheet" href="styles.css">
+</head>
+<body onload="setCount();">
+
+
+<div id="hoverDiv" onmouseout="exited();" onmouseover="entered();">Hover over Me</div>
+
+<div id="tracker"></div>
+
+<script>
+
+var count = [];
+
+function entered() {
+	
+	document.getElementById("hoverDiv").innerHTML = "";
+	count++;
+	document.getElementById("tracker").innerHTML = "Entered "+count+" events";
+	
+}
+
+function exited() {
+	
+	document.getElementById("hoverDiv").innerHTML = "Hover over Me";
+	count++;
+	document.getElementById("tracker").innerHTML = "Exited "+count+" events";
+}
+
+</script>
+</body>
+</html>

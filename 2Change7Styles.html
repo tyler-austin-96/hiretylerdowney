@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Change 7 Styles</title>
+</head>
+<body>
+
+<script>
+function changeStyles() {
+	var div = document.getElementById("div2Change");
+	div.innerHTML = "Change innerHTML, font 24px,border 5px, width 300px, float right, padding 50px, background? you guess";
+	div.style.fontSize = "24px";
+	div.style.width = "300px";
+	div.style.cssFloat = "right";
+	div.style.padding = "50px";
+	div.style.color = "green";
+	div.style.border = "5px solid red";
+	div.style.backgroundColor = "lightgray";
+	div.style.textAlign = "center";
+}
+</script>
+
+<div id="clickText" onclick="changeStyles();"><h4>Click this text</h4></div>
+<hr>
+<div id="div2Change">
+	Click "Click this text" above to change this div in several ways</div>
+
+</body>
+</html>

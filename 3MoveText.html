@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Move Text</title>
+</head>
+<body>
+
+<script>
+function move() {
+	var text = document.getElementById("leftBox").value;
+	document.getElementById("rightBox").value = text;
+	document.getElementById("leftBox").value = "";
+	
+}
+</script>
+
+<form>
+	<input id="leftBox" type="text" name="left" value="Move me">
+	<button type="button" onclick="move();">>> Move left to right >></button>
+	<input id="rightBox" type="text" name="right">
+</form>
+
+</body>
+</html>

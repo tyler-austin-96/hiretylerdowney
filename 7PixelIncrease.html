@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Pixel Increase</title>
+</head>
+<body>
+
+<button type="button" onclick="increase();">Increment by 1px </button>
+
+<br>
+<br>
+
+<div id="divvy">Increase my point size by 1px each click.</div>
+
+<script>
+
+var fntSize = 16;
+
+function increase() {
+	fntSize += 1;
+	document.getElementById("divvy").style.fontSize = ""+fntSize+"px";
+}
+
+</script>
+</body>
+</html>

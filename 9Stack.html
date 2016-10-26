@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Stack</title>
+</head>
+<body>
+
+Push <input id="field" type="text" onchange="pushVal();">
+<button type="button" onclick="popStack();">Pop</button>
+
+<br>
+
+<ul id="list">
+
+</ul>
+
+<script>
+
+var stack = [];
+
+function pushVal() {
+	
+	var val = document.getElementById("field").value;
+	document.getElementById("field").value = "";
+	
+	var list = document.getElementById("list");
+	stack.push(val);
+	writeStack();
+}
+
+function popStack() {
+	stack.pop();
+	writeStack();
+}
+
+function writeStack() {
+	var list = document.getElementById("list");
+	list.innerHTML = ""; //reset
+	if(stack.length == 1) {
+		list.innerHTML += "<li>"+stack[0]+"</li>";
+	}
+	else {
+		for(var i=stack.length-1; i>=0; i--) {
+			list.innerHTML += "<li>"+stack[i]+"</li>";
+		}
+	}
+}
+</script> 
+</body>
+</html>
