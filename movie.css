@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+/* Tyler Downey */
+
+body { 
+	background-image: url("images/moviebg.png");
+	margin: 0px;
+	padding: 0px;
+	
+}
+
+#banner {
+	background-image: url("images/rancidbannerbg.png");
+}
+
+#form {
+	margin: auto;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+h1 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 24pt;
+	font-family: Georgia;
+	text-shadow: 2px 2px dimgray;
+}
+
+
+#mainBox {
+	background-color: darkseagreen;
+	width: 800px;
+	margin: auto;	
+	box-shadow: 10px 10px gray;
+	border-radius: 25px;
+	overflow: hidden;
+	/* height: 960px;*/ 
+	margin-bottom: 15px;
+	padding-bottom: 30px;
+}
+
+#mainBoxLeft {
+	width: 550px;
+}
+
+#scoreHeader {
+	background-image: url("images/rottenlargebg.png");
+	height: 83px;
+	position: relative;	
+	width: 550px;
+}
+
+#poster {
+	display:inline-block;
+	float: right;
+}
+
+#bigRottenText {
+	color: red;
+	font-size: 48pt;
+	font-weight: bold;
+	font-family: sans-serif;
+	position: absolute;
+	top: 0px;
+	left: 130px;
+}
+
+#reviewsBox {
+	background-color: lightgray;
+	width:550px;
+	min-height: 1020px;
+	float: left;
+	overflow: hidden;
+}
+
+#leftColumn {
+	width: 275px;
+	float: left;
+	background-color: transparent;
+	
+}
+
+#rightColumn {
+	width: 275px;
+	float: left;
+	background-color: transparent;
+	
+}
+
+.review {
+	font-size: 8pt; /* TO MATCH VISUAL EXAMPLE */
+	background-color: white;
+	border: 2px solid darkgray;
+	border-radius: 20px;
+	font-family: Georgia;
+	padding: 8px;
+	padding-top: 0px;
+	margin: 5px 25px 5px 10px;
+	float: left;
+	width: 235px;
+}
+
+.symbol {
+	float: left;
+	display: inline;
+	margin: 0px 5px 0px 0px;
+	margin-top: 0;
+	display: inline-block;
+}
+
+q {
+	padding: 0;
+	margin: 0;
+}
+
+.critic {
+	position: relative;
+	left: 10px;
+	font-size: 10pt;
+}
+
+.criticSymbol {
+	float: left;
+}
+
+#infoBoxBG {
+	background-color: darkseagreen;
+	/*height: 550px;*/
+	width: 250px;
+	font-family: Arial;
+	font-size: 8pt; /* TO MATCH VISUAL EXAMPLE */
+	padding-top: 5px;
+	padding-bottom:5x;
+	/*margin-top: 330px;*/
+	float: right;
+	/*position: absolute;*/
+	top: 550px;
+}
+
+#infoBox {
+	
+	/*
+	margin-left: 545px;
+	margin-top: 335px; */
+}
+
+dd {
+	padding-left: 12px;
+	padding-right: 12px;
+	margin-left: 30px;
+	font-size: 8pt; /* TO MATCH VISUAL EXAMPLE */
+}
+
+dt {
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-top: 10px;
+	font-weight: bold;
+}
+
+#footer {
+	padding-top: 20px;
+	margin-right: 255px;
+	text-align: center;
+	height: 40px;
+}

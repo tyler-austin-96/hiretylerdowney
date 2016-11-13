@@ -1,0 +1,155 @@
+@CHARSET "UTF-8";
+
+#header {
+	background-color: rgb(0,210,0);
+	color: white;
+	font-size: 18px;
+	text-align: center;
+	padding: 5px;
+	width: 100%;
+	font-family: "Courier New";
+}
+
+#mainContent {
+	display: table-cell;
+	
+	
+}
+#instructions {
+	float: left;
+	width: 120px;
+	height: 365px;
+	font-style: italic;
+	font-size: 20px;
+	vertical-align: middle;
+	margin-top: 75px;
+	margin-left: 50px;
+}
+
+#calcMain {
+	height: 365px;
+	width: 220px;
+	background-color: rgba(0,0,0,.1);
+	padding: 10px;
+	margin-left: 50px;
+	border: 2px solid rgb(0,210,0);
+	float: left;
+	margin-top: 35px;
+}
+
+
+#calcDisplay {
+	height: 41px;
+	width: 208px;
+	font-size: 40px;
+	border: 1px solid black;
+	vertical-align: middle;	
+	padding-left: 5px;
+	padding-right:5px;
+	padding-top:30px;
+	overflow: hidden;
+}
+
+.calcButton {
+	height: 50px;
+	width: 50px;
+	background-color: lightgray;
+	border: 1px solid black;
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	font-size: 26px;
+	vertical-align: middle;
+	line-height: 50px;
+}
+
+.calcButton:hover {
+	background-color: white;
+	color: gray;
+	border: 1px solid gray;
+}
+
+.calcButton2 {
+	height: 50px;
+	width: 50px;
+	background-color: rgb(0,210,0);
+	border: 1px solid black;
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	font-size: 26px;
+	vertical-align: middle;
+	line-height: 50px;
+}
+
+.calcButton:hover {
+	background-color: white;
+	color: gray;
+	border: 1px solid gray;
+}
+
+.calcButton2:hover {
+	background-color: white;
+	color: rgb(0,210,0);
+	border: 1px solid rgb(0,210,0);
+}
+
+.calcRow {
+	height: 50px;
+	width: 220px;
+	margin: -6px 0px;
+}
+
+#calcZero {
+	height: 50px;
+	width:106px;
+	background-color: lightgray;
+	border: 1px solid black;
+	display: inline-block;
+	text-align: center;
+	font-size: 26px;
+	vertical-align: middle;
+	line-height: 50px;
+}
+
+#calcZero:hover {
+	background-color: white;
+	color: gray;
+	border: 1px solid gray;
+}
+
+.mainFooter {
+	background-color: rgb(0,210,0);
+	font-size: 14px;
+	text-align: center;
+	padding: 5px;
+	clear: both;
+	width: 100%;
+	font-family: "Courier New";
+	margin-top: 20px;
+	
+}
+
+.button1 {
+	
+	background-color: rgb(0,210,0);
+	color: white;
+	padding: 5px 10px;
+	border-radius: 4px;
+	transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+	border: 2px solid rgba(0,210,0);;
+	text-align: center;
+	font-size: 18px;
+	font-family: "Courier New";
+	margin: 5px;
+	
+}
+
+.button1:hover {
+	background-color: white;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	color: rgb(0,210,0);
+}

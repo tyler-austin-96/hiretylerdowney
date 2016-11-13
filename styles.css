@@ -1,0 +1,109 @@
+@CHARSET "UTF-8";
+
+#header {
+	background-color: rgb(0,210,0);
+	color: white;
+	font-size: 18px;
+	text-align: center;
+	padding: 5px;
+	width: 100%;
+	font-family: "Courier New";
+}
+
+#grayBox {
+	background-color: lightgray;
+	float: left;
+	width: 140px;
+	height: 400px;
+}
+
+#iframe {
+	height: 370px;
+	float: left;
+	margin-left: 30px;
+	margin-top: 20px;	
+	display: inline;
+	position: absolute;
+	min-width: 500px;
+}
+
+#footer {
+	background-color: rgb(0,210,0);
+	color: white;
+	font-size: 14px;
+	text-align: center;
+	padding: 5px;
+	clear: both;
+	width: 100%;
+	font-family: "Courier New";
+}
+
+button {
+	margin: 5px;
+}
+
+#section {
+	border: none;
+	height: 370px;
+	display: inline;
+	position: relative;
+	min-width: 500px;
+	width: auto;
+}
+
+#hoverDiv {
+	width: 120px;
+	background-color: pink;
+	border: 3px solid red;
+	text-align: center;
+	padding: 3px;
+	height: 17px;
+}
+
+#tracker {
+	width: 120px;
+	background-color: pink;
+	border: 3px solid red;
+	text-align: center;
+	padding: 3px;
+	margin-top: 25px;
+	height: 17px;
+}
+
+img {
+	height: 60px;
+}
+
+.mainFooter {
+	background-color: rgb(0,210,0);
+	font-size: 14px;
+	text-align: center;
+	padding: 5px;
+	clear: both;
+	width: 100%;
+	font-family: "Courier New";
+	margin-top: 20px;
+	
+}
+
+.button1 {
+	
+	background-color: rgb(0,210,0);
+	color: white;
+	padding: 5px 10px;
+	border-radius: 4px;
+	transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+	border: 2px solid rgba(0,210,0);;
+	text-align: center;
+	font-size: 18px;
+	font-family: "Courier New";
+	margin: 5px;
+	
+}
+
+.button1:hover {
+	background-color: white;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	color: rgb(0,210,0);
+}

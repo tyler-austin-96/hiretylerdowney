@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calculator</title>
+<link href="calcStyles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<script>
+
+var arg1 = null;
+var arg2 = null;
+var operator = null;
+var result = null;
+
+function clicked(input) {
+	
+	
+	if(input >= 0 && input <= 9 && arg1 == null) {
+		if(result != null && operator != null) {
+			arg1 = result;
+			arg2 = input;
+			document.getElementById("calcDisplay").innerHTML = arg2;
+		}
+		else {
+			arg1 = input;
+			document.getElementById("calcDisplay").innerHTML = arg1;
+		}
+	}
+	else if(input >= 0 && input <= 9 && arg1 != null && operator == null && arg1 <= 999999999) {
+		arg1 += ""+input;
+		document.getElementById("calcDisplay").innerHTML = arg1;
+	}
+	
+	else if((input >= 0) && (input <= 9) && (arg1 != null) && (operator != null) && (arg2 == null)) {
+		arg2 += input;
+		document.getElementById("calcDisplay").innerHTML = arg2;
+	}
+	else if((input >= 0) && (input <= 9) && (arg1 != null) && (operator != null) && (arg2 != null)) {
+		arg2 += ""+input;
+		document.getElementById("calcDisplay").innerHTML = arg2;
+	}
+	else if(input == "+" || input == "-" || input == "/" || input == "*") {
+		operator = input;
+	}
+	else if(input == "compute" && arg1 != null && operator != null && arg2 != null) {
+		if(result != null && arg1 != null && arg2 == null) {
+			arg2 = arg1;
+			arg1 = result;
+		}
+		if(operator == "+") 
+			result = Number(arg1) + Number(arg2);
+		else if(operator == "-")
+			result = Number(arg1) - Number(arg2);
+		else if(operator == "/")
+			result = Number(arg1) / Number(arg2);
+		else if(operator == "*")
+			result = Number(arg1) * Number(arg2);
+		
+		document.getElementById('calcDisplay').innerHTML = result;
+		arg1 = null;
+		arg2 = null;
+		operator = null;
+	}
+	else if(input == ".") {
+		if(arg1 != null && arg2 == null) {
+			arg1 += ".";
+			document.getElementById("calcDisplay").innerHTML = arg1;
+		}
+		else if(arg1 != null && arg2 != null) {
+			arg2 += ".";
+			document.getElementById("calcDisplay").innerHTML = arg2;
+		}
+		// NEED TO ADD HOW TO MULTIPLY BY AN ENTERED DECIMAL NUMBER
+	}
+	else if(input == -1) {
+		if(arg1 == null && arg2 == null && result != null) {
+			result *= -1;
+			document.getElementById("calcDisplay").innerHTML = result;
+		}
+		else if(arg1 != null && arg2 == null & operator == null) {
+			arg1 *= -1;
+			document.getElementById("calcDisplay").innerHTML = arg1;
+		}
+		else if(arg1 != null && arg2 != null & operator != null) {
+			arg2 *= -1;
+			document.getElementById("calcDisplay").innerHTML = arg2;
+		}
+	}
+	else if(input == "percent") {
+		if(arg1 == null && arg2 == null && result != null) {
+			result /= 100;
+			document.getElementById("calcDisplay").innerHTML = result;
+		}
+		else if(arg1 != null && arg2 == null & operator == null) {
+			arg1 /= 100;
+			document.getElementById("calcDisplay").innerHTML = arg1;
+		}
+		else if(arg1 != null && arg2 != null & operator != null) {
+			arg2 /= 100;
+			document.getElementById("calcDisplay").innerHTML = arg2;
+		}
+	}
+	else if(input == "AC") {
+		arg1 = null;
+		arg2 = null;
+		operator = null;
+		result = null;
+		document.getElementById("calcDisplay").innerHTML = "0";
+	}
+	
+}
+
+</script>
+<div id="header">Calculator</div>
+
+<div id="mainContent">
+<div id="instructions">
+	Use your mouse to click on the calculator buttons to the right!
+</div>
+<div id="calcMain">
+<div id="calcDisplay">0
+</div>
+<br>
+<div id="keypadMain">
+
+<div class="calcRow">
+<div class="calcButton" onclick="clicked('AC');">AC</div>
+<div class="calcButton" onclick="clicked(-1);">+/-</div>
+<div class="calcButton"onclick="clicked('percent');">%</div>
+<div class="calcButton2"onclick="clicked('/');">&divide</div>
+</div>
+<br>
+
+<div class="calcRow">
+<div class="calcButton"onclick="clicked(7);">7</div>
+<div class="calcButton"onclick="clicked(8);">8</div>
+<div class="calcButton"onclick="clicked(9);">9</div>
+<div class="calcButton2"onclick="clicked('*');">&times</div>
+</div>
+<br>
+
+<div class="calcRow">
+<div class="calcButton"onclick="clicked(4);">4</div>
+<div class="calcButton"onclick="clicked(5);">5</div>
+<div class="calcButton"onclick="clicked(6);">6</div>
+<div class="calcButton2"onclick="clicked('-');">–</div>
+</div>
+<br>
+
+<div class="calcRow">
+<div class="calcButton"onclick="clicked(1);">1</div>
+<div class="calcButton"onclick="clicked(2);">2</div>
+<div class="calcButton"onclick="clicked(3);">3</div>
+<div class="calcButton2"onclick="clicked('+');">+</div>
+</div>
+<br>
+
+<div class="calcRow">
+<div id="calcZero"onclick="clicked(0)">0</div>
+<div class="calcButton"onclick="clicked('.')">.</div>
+<div class="calcButton2"onclick="clicked('compute')">=</div>
+</div>
+
+
+
+</div>
+
+</div>
+</div>
+
+<div class="mainFooter">
+<button class="button1" onclick="window.location.href='projects.html'">Return to Projects</button>
+<button class="button1" onclick="window.location.href='home.html'">Return to Home</button>
+</div></body>
+
+</body>
+</html>
